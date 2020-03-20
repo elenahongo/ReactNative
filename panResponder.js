@@ -10,7 +10,7 @@ class PanResponderExample extends Component {
   _panResponder = {};
   _previousLeft = 0;
   _previousTop = 0;
-  _circleStyles = {};
+  _circleStyles = {style: {left: this._previousLeft, top: this._previousTop}};
   circle = null;
 
   constructor(props) {
@@ -26,9 +26,6 @@ class PanResponderExample extends Component {
       vx: 0,
       vy: 0
     };
-  }
-
-  componentWillMount(){
     this._panResponder = PanResponder.create({
       onStartShouldSetPanResponder: this._handleStartShouldSetPanResponder,
       onMoveShouldSetPanResponder: this._handleMoveShouldSetPanResponder,
@@ -37,13 +34,10 @@ class PanResponderExample extends Component {
       onPanResponderRelease: this._handlePanResponderEnd,
       onPanResponderTerminate: this._handlePanResponderEnd
     });
-    this._previousLeft = 20;
-    this._previousTop = 84;
-    this._circleStyles = {
-      style: {left: this._previousLeft, top: this._previousTop}
-    };
   }
-
+  
+    
+   
   componentDidMount() {
     this._updatePosition();
   }
