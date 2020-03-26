@@ -35,7 +35,6 @@ class PanResponderExample extends Component {
       onPanResponderTerminate: this._handlePanResponderEnd
     });
   }
-  
     
    
   componentDidMount() {

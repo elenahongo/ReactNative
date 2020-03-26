@@ -4,6 +4,9 @@ import Forecast from './Forecast';
 import OpenWeatherMap from "./open_weather_map";
 import Button from "./PressDemo"
 import PanResponderExample from "./panResponder";
+import SimpleList from './simpleList'
+import MockBookList from './mockBookList'
+import BookList from './BookList'
 
 class WeatherProject extends Component {
 
@@ -51,16 +54,16 @@ constructor(props) {
 
       return(
        
-        <View style={styles.container}>
+        <View>
         
-            <PanResponderExample/>
+            <BookList/>
           
         </View>
       );
     }
 }
 
-const baseFontSize = 16;
+/*const baseFontSize = 16;
 
 const styles = StyleSheet.create({
     container: {
@@ -102,6 +105,6 @@ const styles = StyleSheet.create({
       fontSize: baseFontSize, 
       color: "#FFFFFF"
     }
-    });
+    });*/
 
     export default WeatherProject;
